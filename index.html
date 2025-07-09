@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UltraShop – E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <img src="assets/logo.png" alt="Logo" class="logo-img" />
+    <h1 class="site-title">Ultra<span>Shop</span></h1>
+    <input type="search" id="searchInput" placeholder="Search..." />
+  </div>
+</header>
+
+<section class="filters container">
+  <div class="filter-group">
+    <h3>Category</h3>
+    <button class="filter-btn active" data-type="category" data-value="all">All</button>
+    <button class="filter-btn" data-type="category" data-value="electronics">Electronics</button>
+    <button class="filter-btn" data-type="category" data-value="clothing">Clothing</button>
+    <button class="filter-btn" data-type="category" data-value="books">Books</button>
+  </div>
+  <div class="filter-group">
+    <h3>Sort by</h3>
+    <select id="sortSelect">
+      <option value="default">Default</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="rating-desc">Rating: High to Low</option>
+    </select>
+  </div>
+</section>
+
+<main class="product-grid container" id="productGrid"></main>
+
+<!-- Modal -->
+<div class="modal hidden" id="productModal">
+  <div class="modal-content">
+<button class="close-btn" id="closeModalBtn">← Back</button>
+    <span id="closeModal">&times;</span>
+    <img id="modalImg" src="" alt="Product" />
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <p class="price">₹<span id="modalPrice"></span></p>
+    <p class="rating">⭐ <span id="modalRating"></span></p>
+
+    <form id="paymentForm">
+      <input type="text" id="cardName" placeholder="Cardholder Name" required />
+      <input type="text" id="cardNumber" placeholder="Card Number (fake)" required />
+      <input type="text" id="cardExpiry" placeholder="MM/YY" required />
+      <input type="text" id="cardCVV" placeholder="CVV" required />
+      <button type="submit" class="buy-btn">Buy Now</button>
+    </form>
+    <button id="addToCartBtn" class="buy-btn">Add to Cart</button>
+  </div>
+</div>
+
+<div class="popup hidden" id="successPopup">
+  <div class="popup-content">
+    <p>✅ Payment Successful! Redirecting... 💖</p>
+  </div>
+</div>
+
+<aside class="cart-sidebar hidden" id="cartSidebar">
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+  <p class="cart-total">Total: ₹<span id="cartTotal">0</span></p>
+  <button id="checkoutBtn" class="buy-btn">Checkout</button>
+</aside>
+
+<button id="cartToggle" class="buy-btn">Cart (0)</button>
+
+<script src="script.js"></script>
+</body>
+</html>
