@@ -1,80 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UltraShop – E-Commerce</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anushka | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+<div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider"></span>
+  </label>
+</div>
+<canvas id="matrix"></canvas>
+  <section class="hero">
+  <div id="particles-js"></div>
+  <h1><span class="bounce-in-text">Hello, I am Anushka!</span></h1>
+  <img src="girl.jpeg" alt="Profile" class="hero-gif">
+  <p>Web Developer | Learner | Achiever</p>
+  <a href="#skills" class="scroll-btn">Explore My Work</a>
+</section>
 
-<header class="navbar">
-  <div class="container">
-    <img src="assets/logo.png" alt="Logo" class="logo-img" />
-    <h1 class="site-title">Ultra<span>Shop</span></h1>
-    <input type="search" id="searchInput" placeholder="Search..." />
-  </div>
-</header>
+  <nav class="navbar">
+  <a href="#about"><i class="fas fa-user"></i> About 👩‍💻</a>
+  <a href="#skills"><i class="fas fa-code"></i> Skills 💡</a>
+  <a href="#projects"><i class="fas fa-folder-open"></i> Projects 🚀</a>
+  <a href="#contact"><i class="fas fa-envelope"></i> Contact 📬</a>
+</nav>
 
-<section class="filters container">
-  <div class="filter-group">
-    <h3>Category</h3>
-    <button class="filter-btn active" data-type="category" data-value="all">All</button>
-    <button class="filter-btn" data-type="category" data-value="electronics">Electronics</button>
-    <button class="filter-btn" data-type="category" data-value="clothing">Clothing</button>
-    <button class="filter-btn" data-type="category" data-value="books">Books</button>
+  <section id="about" class="section">
+    <h2>About Me 👩‍🎓</h2>
+    <p>I'm a curious and driven engineering student with a passion for creating interactive web experiences.<br/><b>9.55 CGPA holder and ML enthusiast.</b></br>
+    With a strong foundation in programming, I’ve explored certified paths in machine learning and cloud computing to expand my tech toolkit.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>  Skills 🚀</h2>
+    <p>
+      🌐 <b>Web Development</b><br/>
+      Built interactive web apps using HTML, CSS, JavaScript, with experience in React.js and Node.js.<br/><br/>
+      
+      🧠 <b>Machine Learning</b><br/>
+      Comfortable with Python and exploring the exciting world of ML algorithms and intelligent systems.<br/><br/>
+      
+      ☁️ <b>Database & Cloud</b><br/>
+      Skilled in handling databases and working with cloud platforms for scalable app development.<br/><br/>
+      
+      🎯 <b>Leadership & Soft Skills</b><br/>
+      Great at multitasking, managing time, and stepping up as a team leader when it counts.<br/><br/>
+<div class="extra-skills">
+  <h3>Other Skills</h3>
+  <div class="skills-logos">
+    <div class="skill-item">
+      <img src="aws.png" alt="AWS" title="💡AWS">
+      <p>AWS</p>
+    </div>
+    <div class="skill-item">
+      <img src="c.jfif" alt="C/C++" title="💡C/C++">
+      <p>C/C++</p>
+    </div>
+    <div class="skill-item">
+      <img src="java.png" alt="Java" title="💡Java">
+      <p>Java</p>
+    </div>
+    <div class="skill-item">
+      <img src="oop.jpg" alt="OOP" title="💡OOP">
+      <p>OOP</p>
+    </div>
+    <div class="skill-item">
+      <img src="python.png" alt="Python" title="💡Python">
+      <p>Python</p>
+    </div>
+    <div class="skill-item">
+      <img src="node.png" alt="Node.js" title="💡Node.js">
+      <p>Node.js</p>
+    </div>
+    <div class="skill-item">
+      <img src="sql.jpg" alt="SQL" title="💡SQL">
+      <p>SQL</p>
+    </div>
   </div>
-  <div class="filter-group">
-    <h3>Sort by</h3>
-    <select id="sortSelect">
-      <option value="default">Default</option>
-      <option value="price-asc">Price: Low to High</option>
-      <option value="price-desc">Price: High to Low</option>
-      <option value="rating-desc">Rating: High to Low</option>
-    </select>
+</div>
+
+    </p>
+    <div class="icon-list">
+      <i class="fab fa-html5 skill-icon" title="HTML5"></i>
+      <i class="fab fa-css3-alt skill-icon" title="CSS3"></i>
+      <i class="fab fa-js skill-icon" title="JavaScript"></i>
+      <i class="fas fa-brain skill-icon" title="AI Basics"></i>
+    </div>
+  </section>
+
+  <!-- 🛑 Only the projects section is shown below. Keep the rest of your HTML as it is -->
+
+<section id="projects" class="section">
+  <h2>My Projects 🧩</h2>
+  <div class="project-container" id="all-projects">
+    <!-- First 6 projects -->
+    <div class="project-card">
+      <img src="solar-system.gif" alt="3D Solar System" />
+      <h3>🌌 3D Solar System</h3>
+      <p>A dynamic 3D model of the solar system using Three.js.</p>
+      <a href="https://basak-anushka13.github.io/SolarSystem/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card">
+      <img src="ortho-trace.gif" alt="OrthoTrace App" />
+      <h3>🦴 OrthoTrace</h3>
+      <p>A bone fracture detection app that uses ML to help doctors with quick diagnosis.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="weather-app.gif" alt="Weather App" />
+      <h3>☁️ Cloud-Based Weather App</h3>
+      <p>Weather app, built using cloud APIs.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="game.gif" alt="Startup Website" />
+      <h3>💼 Vortexium</h3>
+      <p>Interactive startup website with futuristic effects.</p>
+      <a href="https://basak-anushka13.github.io/my-startup/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card">
+      <img src="email.gif" alt="InboxArmor" />
+      <h3>🛡️ InboxArmor</h3>
+      <p>A Flask-based web app that uses an SVM ML model to classify emails as spam or not spam.</p>
+      <a href="https://emailspamdetector-jggl.onrender.com/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card">
+      <img src="hand.gif" alt="Digit Recognizer" />
+      <h3>🔢 Handwritten Digit Recognizer</h3>
+      <p>This project uses a CNN trained on the MNIST dataset to recognize handwritten digits.</p>
+      <a href="https://huggingface.co/spaces/Basakanu/digit-recognizer" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <!-- Hidden projects with 'more-project' class -->
+    <div class="project-card more-project" style="display: none;">
+      <img src="loan.gif" alt="Loan Eligibility Predictor" />
+      <h3>💰 Loan Eligibility Predictor</h3>
+      <p>An ML–powered app that predicts loan approval using a smart Random Forest model.</p>
+      <a href="https://loan-eligibility-predictor-l8umxrcqefgocpt2yfqxkd.streamlit.app/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card more-project" style="display: none;">
+      <img src="col.gif" alt="TechTales" />
+      <h3>🏫 TechTales</h3>
+      <p>A full-stack college club website with MongoDB integration.</p>
+      <a href="https://techtales-contact-api.onrender.com/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card more-project" style="display: none;">
+      <img src="blog.gif" alt="WriteVerse" />
+      <h3>📝 WriteVerse</h3>
+      <p>A simple and clean markdown blog using Firebase and vanilla JavaScript.</p>
+      <a href="https://writeverse-1b743.web.app" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card more-project" style="display: none;">
+      <img src="res.gif" alt="Resume Builder" />
+      <h3>📝 Elev́e</h3>
+      <p>A resume builder project using HTML, CSS, and JavaScript.</p>
+      <a href="https://basak-anushka13.github.io/resume-builder/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card more-project" style="display: none;">
+      <img src="stud.gif" alt="BrightGrade" />
+      <h3>🎓 BrightGrade</h3>
+      <p>A modern student dashboard built with React, Tailwind CSS, and Vite.</p>
+      <a href="https://basak-anushka13.github.io/student-dashboard/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+
+    <div class="project-card more-project" style="display: none;">
+      <img src="todo.gif" alt="To-Do List" />
+      <h3>✅ ListNova</h3>
+      <p>A colorful and fun To-Do list app made using HTML, CSS, and JavaScript.</p>
+      <a href="https://basak-anushka13.github.io/listnova/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+<div class="project-card more-project" style="display: none;">
+      <img src="shop.gif" alt="To-Do List" />
+      <h3>✅ UltraShop</h3>
+      <p>A stylish and interactive e-commerce product catalog.</p>
+      <a href="https://basak-anushka13.github.io/ecommerce-web/" target="_blank" class="project-btn">🔗 View Live</a>
+    </div>
+  </div>
+  <!-- View All Button -->
+  <button id="viewAllBtn" class="btn">🔽 View All</button>
+</section>
+
+  <section id="certificate" class="section">
+  <h2>Certification 🏅</h2>
+  <div class="certificate-card">
+    <h3>IIT Madras - Strategy Formulation and Data Visualization</h3>
+    <a href="iit.jpg" download class="download-btn">⬇️ Download Certificate</a>
+  </div>
+<div class="certificate-card">
+    <h3>Advanced SQL</h3>
+    <a href="sq.jpeg" download class="download-btn">⬇️ Download Certificate</a>
+  </div>
+</section>
+<!-- Languages Section -->
+<section id="languages" class="section">
+  <h2>🌐 Languages</h2>
+  <ul class="language-list">
+    <li>English – Fluent</li>
+    <li>Hindi – Native</li>
+    <li>Bengali – Ntive</li>
+    <!-- Add more if needed -->
+  </ul>
+</section>
+
+<section id="experience" class="section">
+  <h2>Experience 🏢</h2>
+  <div class="experience-container">
+    <div class="experience-card">
+      <h3>Web Developer Intern</h3>
+      <p><strong>Tamizhan Skills</strong> | Jun 2025 – Jul 2025</p>
+      <p>🔹Undergoing practical training and skill development through Tamizhan Skills' RISE Internship Program.</p>
+    </div>
+
+    <div class="experience-card">
+      <h3>IEEE Member</h3>
+      <p><strong>Student member</strong> | Sep 2024 – Dec 2025</p>
+      <p>🔹Gained exposure to cutting-edge research and IEEE publications in different fields.</p>
+    </div>
+
+    <!-- Add more experience cards as needed -->
   </div>
 </section>
 
-<main class="product-grid container" id="productGrid"></main>
+  <section id="contact" class="section">
+  <h2>Contact 📫</h2>
+  <p>
+    Email: <a href="mailto:basakanu1313@gmail.com">basakanu1313@gmail.com</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/anushka-basak-39b2a525a" target="_blank">linkedin.com/in/anushka-basak-39b2a525a</a><br>
+    GitHub: <a href="https://github.com/basak-anushka13" target="_blank">github.com/basak-anushka13</a>
+  </p>
 
-<!-- Modal -->
-<div class="modal hidden" id="productModal">
-  <div class="modal-content">
-<button class="close-btn" id="closeModalBtn">← Back</button>
-    <span id="closeModal">&times;</span>
-    <img id="modalImg" src="" alt="Product" />
-    <h2 id="modalTitle"></h2>
-    <p id="modalDesc"></p>
-    <p class="price">₹<span id="modalPrice"></span></p>
-    <p class="rating">⭐ <span id="modalRating"></span></p>
-
-    <form id="paymentForm">
-      <input type="text" id="cardName" placeholder="Cardholder Name" required />
-      <input type="text" id="cardNumber" placeholder="Card Number" required />
-      <input type="text" id="cardExpiry" placeholder="MM/YY" required />
-      <input type="text" id="cardCVV" placeholder="CVV" required />
-      <button type="submit" class="buy-btn">Buy Now</button>
-    </form>
-    <button id="addToCartBtn" class="buy-btn">Add to Cart</button>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/anushka-basak-39b2a525a" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/basak-anushka13" target="_blank"><i class="fab fa-github"></i></a>
   </div>
-</div>
+  <a class="download-btn" href="AnushkaBasakresume.pdf" download>📄 Download Resume</a>
+</section>
 
-<div class="popup hidden" id="successPopup">
-  <div class="popup-content">
-    <p>✅ Payment Successful! Redirecting... 💖</p>
-  </div>
-</div>
+<section id="thanks" class="section">
+  <h2>Thanks for visiting!👋 </h2>
+  <img src="minion.gif" alt="AI Brain Animation" class="brain-gif" />
+</section>
 
-<aside class="cart-sidebar hidden" id="cartSidebar">
-  <h3>Your Cart</h3>
-  <div id="cartItems"></div>
-  <p class="cart-total">Total: ₹<span id="cartTotal">0</span></p>
-  <button id="checkoutBtn" class="buy-btn">Checkout</button>
-</aside>
-
-<button id="cartToggle" class="buy-btn">Cart (0)</button>
-
-<script src="script.js"></script>
-</body>
+  <footer>Made with ❤️ by Anushka</footer>
+  </body>
 </html>
