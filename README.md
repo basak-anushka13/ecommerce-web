@@ -8,7 +8,7 @@ An interactive and aesthetic product listing page built with HTML, CSS, and Java
 
 \## 🌐 Live Demo
 
-\[Click Here to View UltraShop](https://your-username.github.io/ultrashop/)
+\[Click Here to View UltraShop](https://basak-anushka13.github.io/ecommerce-web/)
 
 
 
